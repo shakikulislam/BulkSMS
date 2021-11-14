@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/BulkSMS/bin/Debug
+/BulkSMS/obj/Debug
+/BulkSMS.v12.suo
