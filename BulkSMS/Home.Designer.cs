@@ -64,6 +64,7 @@
             this.Controls.Add(this.buttonBulkSMS);
             this.Controls.Add(this.buttonSingleSMS);
             this.Name = "Home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.ResumeLayout(false);
 

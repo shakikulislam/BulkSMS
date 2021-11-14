@@ -46,8 +46,7 @@ namespace BulkSMS
                         Thread.Sleep(100);
                         serialPort.WriteLine("AT+CSCS=\"GSM\"" + Environment.NewLine);
                         Thread.Sleep(100);
-                        serialPort.WriteLine("AT+CMGS=\"" + dataGridViewNumberList.Rows[ss].Cells["number"].Value +
-                                             "\"" + Environment.NewLine);
+                        serialPort.WriteLine("AT+CMGS=\"" + dataGridViewNumberList.Rows[ss].Cells["number"].Value + "\"" + Environment.NewLine);
                         Thread.Sleep(100);
                         serialPort.WriteLine(richTextBoxMessage.Text + Environment.NewLine);
                         Thread.Sleep(100);
@@ -55,8 +54,11 @@ namespace BulkSMS
                         Thread.Sleep(100);
 
                         var response = serialPort.ReadExisting();
+
                         dataGridViewNumberList.Rows[ss].Cells["status"].Value = response.Contains("ERROR") ? "Failed!" : "Success";
+                        Thread.Sleep(100);
                         serialPort.Close();
+
                     }
                 }
 
@@ -85,6 +87,7 @@ namespace BulkSMS
         {
             try
             {
+                dataGridViewNumberList.Rows.Clear();
                 if (textBoxWorksheet.Text=="")throw new Exception("Please enter SheetName");
 
                 Application xlApplication;

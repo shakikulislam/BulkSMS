@@ -122,6 +122,7 @@
             this.Controls.Add(this.richTextBoxMessage);
             this.Controls.Add(this.textBoxNumber);
             this.Name = "SingleSms";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Single Number";
             this.ResumeLayout(false);
             this.PerformLayout();

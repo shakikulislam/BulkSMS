@@ -171,9 +171,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(21, 76);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 13);
+            this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 20;
-            this.label1.Text = "Sheet Name";
+            this.label1.Text = "SheetName";
             // 
             // MultiNumber
             // 
@@ -191,6 +191,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.richTextBoxMessage);
             this.Name = "MultiNumber";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Multi Number / Bulk SMS";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNumberList)).EndInit();
             this.ResumeLayout(false);
