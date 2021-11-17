@@ -56,8 +56,10 @@ namespace BulkSMS
                         var response = serialPort.ReadExisting();
 
                         dataGridViewNumberList.Rows[ss].Cells["status"].Value = response.Contains("ERROR") ? "Failed!" : "Success";
-                        Thread.Sleep(100);
+                        dataGridViewNumberList.Refresh();
+                        Thread.Sleep(1000);
                         serialPort.Close();
+                        Thread.Sleep(500);
 
                     }
                 }
@@ -81,6 +83,7 @@ namespace BulkSMS
             ofd.Filter = "Excel |*.xls; *xlsx";
             ofd.ShowDialog();
             strFileName = ofd.FileName;
+            labelExcelFileName.Text = ofd.SafeFileName;
         }
 
         private void buttonLoad_Click(object sender, EventArgs e)

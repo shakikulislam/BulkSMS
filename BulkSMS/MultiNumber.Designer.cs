@@ -42,6 +42,7 @@
             this.textBoxWorksheet = new System.Windows.Forms.TextBox();
             this.buttonLoad = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.labelExcelFileName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNumberList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,11 +176,21 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "SheetName";
             // 
+            // labelExcelFileName
+            // 
+            this.labelExcelFileName.AutoSize = true;
+            this.labelExcelFileName.Location = new System.Drawing.Point(98, 52);
+            this.labelExcelFileName.Name = "labelExcelFileName";
+            this.labelExcelFileName.Size = new System.Drawing.Size(13, 13);
+            this.labelExcelFileName.TabIndex = 21;
+            this.labelExcelFileName.Text = "--";
+            // 
             // MultiNumber
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(687, 307);
+            this.Controls.Add(this.labelExcelFileName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonLoad);
             this.Controls.Add(this.textBoxWorksheet);
@@ -215,5 +226,6 @@
         private System.Windows.Forms.TextBox textBoxWorksheet;
         private System.Windows.Forms.Button buttonLoad;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelExcelFileName;
     }
 }
